@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("json/user.json")
+        .then((response)=>response.json())
+        .then((result)=>{
+            console.log(result);
+            for(var k in result)
+            {
+                document.write("Name- " +result[k].name+" age- " +result[k].age+" City- " +result[k].city+"<br>")
+            }
+        }).catch((error)=>console.log("something wrong...."))
+    </script>
+</body>
+</html>
